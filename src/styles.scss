@@ -31,12 +31,66 @@ $personal-website-angular-theme: mat.define-theme((color: (theme-type: light,
 // @include mat.color-variants-backwards-compatibility($theme);
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf')
+}
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: #f1fa8c;
+  color: #282a36;
+}
+
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #282a36;
+  color: #f8f8f2;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+// General / Reusable
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 3.2rem;
+}
+
+.section-title {
+  color: #ff79c6;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  color: #bd93f9;
+  font-size: 4.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 4.8rem;
+  text-align: center;
 }
