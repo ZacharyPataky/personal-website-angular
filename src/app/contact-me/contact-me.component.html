@@ -1,1 +1,42 @@
-<p>contact-me works!</p>
+<h2>Contact Me</h2>
+<h3>Talk tech to me</h3>
+
+<!-- Personal Information -->
+<p>zacharypataky&#64;gmail.com</p>
+<p>716-997-2966</p>
+
+<mat-icon>Facebook</mat-icon>
+<mat-icon>Instagram</mat-icon>
+<mat-icon>LinkedIn</mat-icon>
+<mat-icon>GitHub</mat-icon>
+
+<button mat-button>Download Resume</button>
+
+<!-- Contact Form -->
+<mat-form-field appearance="outline">
+  <mat-label>Name</mat-label>
+  <mat-icon matSuffix>badge</mat-icon>
+  <input matInput required placeholder="Zachary A. Pataky">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Email</mat-label>
+  <mat-icon matSuffix>mail</mat-icon>
+  <input matInput required placeholder="zacharypataky@gmail.com">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Phone Number</mat-label>
+  <mat-hint>Include area code</mat-hint>
+  <mat-icon matSuffix>phone</mat-icon>
+  <span matTextPrefix>+1 &nbsp;</span>
+  <input type="tel" matInput placeholder="716-997-2966">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Message</mat-label>
+  <mat-icon matSuffix>message</mat-icon>
+  <textarea matInput required placeholder="Hello World!"></textarea>
+</mat-form-field>
+
+<button mat-button>Send</button>
