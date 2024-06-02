@@ -1,0 +1,33 @@
+<mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+
+  <!-- Header -->
+  <mat-expansion-panel-header>
+    <mat-panel-title>{{ workExperience.employer }}</mat-panel-title>
+    <mat-panel-description>{{ workExperience.jobTitle }}</mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <!-- Company Information -->
+  <div class="companyInformation">
+    <img [src]="" alt="{{workExperience.employer}} Logo">
+    <p>{{ workExperience.employerAddress }}</p>
+    <p>{{ workExperience.timePeriod }}</p>
+  </div>
+
+  <!-- Responsibilities -->
+  <div class="responsibilities">
+    <h2>Responsibilities</h2>
+    <mat-list>
+      @for(responsibility of workExperience.responsibilities; track responsibility){
+      <mat-list-item>{{ responsibility }}</mat-list-item>
+      }
+    </mat-list>
+  </div>
+
+  <!-- Skills -->
+  <div class="skills">
+    <h2>Skills</h2>
+    @for (skill of workExperience.skills; track skill){
+    <mat-chip>{{ skill }}</mat-chip>
+    }
+  </div>
+</mat-expansion-panel>

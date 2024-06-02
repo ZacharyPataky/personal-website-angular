@@ -1,0 +1,66 @@
+<mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+
+  <!-- Header -->
+  <mat-expansion-panel-header>
+    <mat-panel-title>{{ education.educationName }}</mat-panel-title>
+    <mat-panel-description>{{ education.educationAchievement }}</mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <!-- Group Tabs -->
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+
+    <!-- Degree Information -->
+    <mat-tab label="Degree Information">
+      <h3>School Information</h3>
+      <img src="" alt="{{ education.degreeInformation.educationName }} Logo">
+      <p>{{ education.degreeInformation.educationAddress}}</p>
+
+      <h3>Academic Information</h3>
+      <p>Major: {{ education.degreeInformation.major }}</p>
+      <p>Minor: {{ education.degreeInformation.minor }}</p>
+      <p>Cumulative GPA: {{ education.degreeInformation.gpa }}</p>
+    </mat-tab>
+
+    <!-- Activities -->
+    <mat-tab label="Activities">
+      @for(activity of education.activities; track activity) {
+      <h4>{{ activity.activityTitle }}</h4>
+      <h4>{{ activity.membership }}</h4>
+      <p>{{ activity.description }}</p>
+      }
+    </mat-tab>
+
+    <!-- Honors and Awards -->
+    <mat-tab label="Honors and Awards">
+      @for(honor of education.honorsAndAwards; track honor) {
+      <h4>{{ honor.honorName }}</h4>
+      <h4>{{ honor.timePeriod }}</h4>
+      <p>{{ honor.description }}</p>
+      }
+    </mat-tab>
+
+    <!-- Course Highlights -->
+    <mat-tab label="Course Highlights">
+      @for(courseHighlight of education.courseHighlights; track courseHighlight) {
+      <h3>{{ courseHighlight.groupTitle }}</h3>
+      <mat-list>
+        @for(course of courseHighlight.courses; track course) {
+        <mat-list-item>{{ course }}</mat-list-item>
+        }
+      </mat-list>
+      }
+    </mat-tab>
+
+    <!-- Major Projects -->
+    <mat-tab label="Major Projects">
+      @for(majorProject of education.majorProjects; track majorProject) {
+      <h4>{{ majorProject.projectTitle }}</h4>
+      <h4>{{ majorProject.timePeriod }}</h4>
+      <p>{{ majorProject.description }}</p>
+      }
+    </mat-tab>
+
+  </mat-tab-group>
+
+
+</mat-expansion-panel>
