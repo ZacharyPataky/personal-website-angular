@@ -2,32 +2,44 @@
 
   <!-- Header -->
   <mat-expansion-panel-header>
-    <mat-panel-title>{{ workExperience.employer }}</mat-panel-title>
-    <mat-panel-description>{{ workExperience.jobTitle }}</mat-panel-description>
+    <mat-panel-title [style.color]="panelOpenState ? '#8be9fd' : '#F8F8F2'">
+      {{ workExperience.employer }}
+    </mat-panel-title>
+    <mat-panel-description [style.color]="panelOpenState ? '#8be9fd' : '#F8F8F2'">
+      {{ workExperience.jobTitle }}
+    </mat-panel-description>
   </mat-expansion-panel-header>
 
-  <!-- Company Information -->
-  <div class="companyInformation">
-    <img [src]="" alt="{{workExperience.employer}} Logo">
-    <p>{{ workExperience.employerAddress }}</p>
-    <p>{{ workExperience.timePeriod }}</p>
-  </div>
+  <!-- Body Grid -->
+  <div class="grid-container">
 
-  <!-- Responsibilities -->
-  <div class="responsibilities">
-    <h2>Responsibilities</h2>
-    <mat-list>
-      @for(responsibility of workExperience.responsibilities; track responsibility){
-      <mat-list-item>{{ responsibility }}</mat-list-item>
-      }
-    </mat-list>
-  </div>
+    <!-- Company Information -->
+    <div class="companyInformation">
+      <img src="" alt="{{workExperience.employer}} Logo">
+      <h2 class="highlight">{{workExperience.employer}}</h2>
+      <p>{{ workExperience.employerAddress }}</p>
+      <p>{{ workExperience.timePeriod }}</p>
+    </div>
 
-  <!-- Skills -->
-  <div class="skills">
-    <h2>Skills</h2>
-    @for (skill of workExperience.skills; track skill){
-    <mat-chip>{{ skill }}</mat-chip>
-    }
+    <!-- Responsibilities -->
+    <div class="responsibilities">
+      <h2>Responsibilities</h2>
+      <mat-list>
+        @for(responsibility of workExperience.responsibilities; track responsibility){
+        <mat-list-item role="listitem">{{ responsibility }}</mat-list-item>
+        }
+      </mat-list>
+    </div>
+
+    <!-- Skills -->
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        @for (skill of workExperience.skills; track skill){
+        <mat-chip color="#8be9fd">{{ skill }}</mat-chip>
+        }
+      </div>
+    </div>
+
   </div>
 </mat-expansion-panel>

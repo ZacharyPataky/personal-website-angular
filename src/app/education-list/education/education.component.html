@@ -1,9 +1,14 @@
-<mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+<mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false"
+  [ngClass]="{ 'active-border': panelOpenState }">
 
   <!-- Header -->
   <mat-expansion-panel-header>
-    <mat-panel-title>{{ education.educationName }}</mat-panel-title>
-    <mat-panel-description>{{ education.educationAchievement }}</mat-panel-description>
+    <mat-panel-title [style.color]="panelOpenState ? '#8be9fd' : '#F8F8F2'">
+      {{ education.educationName}}
+    </mat-panel-title>
+    <mat-panel-description [style.color]="panelOpenState ? '#8be9fd' : '#F8F8F2'">
+      {{ education.educationAchievement}}
+    </mat-panel-description>
   </mat-expansion-panel-header>
 
   <!-- Group Tabs -->

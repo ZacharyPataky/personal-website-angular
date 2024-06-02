@@ -1,0 +1,26 @@
+.mat-expansion-panel {
+  background-color: #44475a;
+
+  .mat-expansion-panel-header {
+
+    .mat-expansion-panel-header-title,
+    .mat-expansion-panel-header-description {
+      color: #F8F8F2;
+      font-size: 1.8rem;
+    }
+
+    ::ng-deep svg {
+      fill: #F8F8F2;
+    }
+  }
+
+  &.active-border {
+    border-top: 0.4rem solid #8be9fd;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 3.2rem rgba(139, 223, 253, 0.12);
+  }
+}

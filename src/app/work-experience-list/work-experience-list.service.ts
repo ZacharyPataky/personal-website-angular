@@ -39,7 +39,7 @@ export class WorkExperienceListService {
     },
     {
       employerImageUrl: './assets/canisius-university.png',
-      employer: 'Canisius University; Quantitative Sciences Department',
+      employer: 'Canisius University; QSD',
       employerAddress: '2001 Main St, Buffalo, NY 14208',
       timePeriod: 'February 2021 - May 2022',
       jobTitle: 'Tutor and Teacher\'s Assistant',
@@ -73,7 +73,7 @@ export class WorkExperienceListService {
     },
     {
       employerImageUrl: './assets/canisius-university.png',
-      employer: 'Canisius University, New Griff Orientation',
+      employer: 'Canisius University, NGO',
       employerAddress: '2001 Main St, Buffalo, NY 14208',
       timePeriod: 'June 2020 - August 2020',
       jobTitle: 'Lead Orientation Leader',
@@ -92,7 +92,7 @@ export class WorkExperienceListService {
     },
     {
       employerImageUrl: './assets/canisius-university.png',
-      employer: 'Canisius University, New Griff Orientation',
+      employer: 'Canisius University, NGO',
       employerAddress: '2001 Main St, Buffalo, NY 14208',
       timePeriod: 'August 2019',
       jobTitle: 'Orientation Leader',

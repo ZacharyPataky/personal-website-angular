@@ -1,0 +1,74 @@
+.mat-expansion-panel {
+  background-color: #44475a;
+
+  .mat-expansion-panel-header {
+
+    .mat-expansion-panel-header-title,
+    .mat-expansion-panel-header-description {
+      color: #F8F8F2;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    ::ng-deep svg {
+      fill: #F8F8F2;
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1.8rem;
+
+    .companyInformation {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+
+      color: #F8F8F2;
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+  }
+
+  .responsibilities {
+    .mat-list {
+      color: #F8F8F2;
+      font-size: 0.8rem;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .mat-mdc-standard-chip {}
+  }
+
+  h2 {
+    color: #bd93f9;
+    font-size: 1.8rem;
+  }
+
+  &.active-border {
+    border-top: 0.4rem solid #8be9fd;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 3.2rem rgba(139, 223, 253, 0.12);
+  }
+}
+
+.highlight {
+  color: #bd93f9;
+  font-weight: 700;
+}
