@@ -3,11 +3,12 @@ import { Education } from '../models/education.model';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [MatExpansionModule, MatListModule, MatTabsModule],
+  imports: [CommonModule, MatExpansionModule, MatListModule, MatTabsModule],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'
 })

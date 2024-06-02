@@ -1,6 +1,10 @@
-<h2 class="section-title">Education</h2>
-<h3 class="section-subtitle">A lifelong learner</h3>
+<div class="container">
+  <h2 class="section-title">Education</h2>
+  <h3 class="section-subtitle">A lifelong learner</h3>
 
-@for (education of educations; track educations){
-<app-education [education]="education"></app-education>
-}
+  <div class="educations">
+    @for (education of educations; track educations){
+    <app-education [education]="education"></app-education>
+    }
+  </div>
+</div>
